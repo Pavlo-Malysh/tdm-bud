@@ -1,6 +1,5 @@
 .header {
-  background-color: rgba(23, 19, 15, .92);
-
+  background-color: rgba(23, 19, 15, 0.92);
   border-bottom: 1px solid var(--border-dark);
 
 }
@@ -163,7 +162,7 @@
   border: 1px solid var(--border-dark);
   color: var(--white);
   padding: 12px 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
