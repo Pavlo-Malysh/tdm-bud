@@ -1,0 +1,38 @@
+.about-section {
+  background-color: var(--bg-light);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.about-subtitle {
+  text-transform: uppercase;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-text-light);
+  margin-bottom: 8px;
+}
+
+.about-title {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.about-text {}
+
+.about-subtext {}
+
+.about-list {}
+
+.about-item {}
+
+.about-list-title {}
+
+.about-list-text {}
