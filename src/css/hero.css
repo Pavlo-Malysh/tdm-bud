@@ -11,13 +11,21 @@
 
 }
 
+@media screen and (min-resolution: 2x),
+(-webkit-min-device-pixel-ratio: 2) {
+  .hero {
+    background-image: linear-gradient(rgba(23, 19, 15, 0.48)), url(/img/hero/hero-img4.jpg);
+  }
+}
+
+
 .hero-subtitle {
   color: #f3f2f2;
   text-transform: uppercase;
   font-size: 12px;
 }
 
-.title {
+.hero-title {
   font-family: "Manrope";
   font-weight: 800;
   font-size: 36px;
@@ -130,7 +138,6 @@
   line-height: 1.48;
   letter-spacing: 0.04em;
 
-
   color: var(--white);
 
 }
@@ -144,3 +151,36 @@
 
   color: var(--white);
 }
+
+@media screen and (max-width: 350px) {
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-item-subtitle {
+    font-size: 28px;
+  }
+
+  .hero-item-text {
+    max-width: 120px;
+  }
+
+  .hero-list {
+    gap: 20px 45px;
+    padding: 0 15px;
+  }
+
+  .hero-item {
+    width: calc((100% - 45px) / 2);
+  }
+
+}
+
+
+@media screen and (min-width: 768px) {}
+
+
+
+@media screen and (min-width: 1200px) {}

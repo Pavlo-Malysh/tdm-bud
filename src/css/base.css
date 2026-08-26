@@ -18,8 +18,8 @@
   -webkit-text-size-adjust: 100%;
 
   /* Accent color */
-  /* --bg: #f3f2f2; */
   --bg: #17130f;
+  --bg-light: #f3f2f2;
   --bg-deep: #0E0B09;
   --light: #EFE8DC;
   --accent: #C1622E;
@@ -31,6 +31,9 @@
   --border-dark: rgba(255, 255, 255, 0.10);
   --border-light: rgba(0, 0, 0, .10);
   --white: #FFFFFF;
+  --color-text: #201e1d;
+  --accent-text-dark: #E08A57;
+  --accent-text-light: #A44D20;
 }
 
 body {
