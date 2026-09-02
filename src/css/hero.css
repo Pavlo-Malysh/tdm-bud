@@ -1,7 +1,7 @@
 .hero {
   margin: 0 auto;
-  height: 100%;
-  background-image: linear-gradient(rgba(23, 19, 15, 0.48)), url(/img/hero/hero-img4.jpg);
+  background-image: linear-gradient(rgba(23, 19, 15, 0.48), rgba(23, 19, 15, 0.48)),
+    url(../img/hero/hero-img4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,13 +9,6 @@
   padding-bottom: 64px;
   padding-top: 64px;
 
-}
-
-@media screen and (min-resolution: 2x),
-(-webkit-min-device-pixel-ratio: 2) {
-  .hero {
-    background-image: linear-gradient(rgba(23, 19, 15, 0.48)), url(/img/hero/hero-img4.jpg);
-  }
 }
 
 
@@ -47,6 +40,13 @@
   margin-bottom: 30px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
 .hero-btn {
   display: block;
   width: 100%;
@@ -60,7 +60,6 @@
   border: none;
   border-radius: 4px;
   text-decoration: none;
-  margin-bottom: 12px;
 
   box-shadow:
     0 1px 2px rgba(23, 19, 15, .28),
@@ -102,8 +101,6 @@
     0 1px 2px rgba(14, 11, 9, .3),
     inset 0 1px 0 rgba(255, 255, 255, .10);
   transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
-
-  margin-bottom: 50px;
 }
 
 .hero-link:hover,
@@ -179,8 +176,90 @@
 }
 
 
-@media screen and (min-width: 768px) {}
+/* TABLET */
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    padding-bottom: 64px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    max-width: 600px;
+    margin-bottom: 24px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    max-width: 520px;
+    margin-bottom: 40px;
+  }
+
+  .hero-actions {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 80px;
+  }
+
+  .hero-btn,
+  .hero-link {
+    width: auto;
+  }
+
+  .hero-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 32px 0 0;
+    border-top: 1px solid rgba(255, 255, 255, .18);
+  }
+
+  .hero-item {
+    width: auto;
+  }
+
+  .hero-item-subtitle {
+    font-size: 36px;
+  }
+
+  .hero-item-text {
+    max-width: none;
+  }
+}
 
 
+/* DESKTOP */
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
 
-@media screen and (min-width: 1200px) {}
+  .hero-title {
+    font-size: 60px;
+    max-width: 760px;
+  }
+
+  .hero-text {
+    max-width: 560px;
+    margin-bottom: 48px;
+  }
+
+  .hero-actions {
+    margin-bottom: 110px;
+  }
+
+  .hero-list {
+    gap: 32px;
+    max-width: 900px;
+    padding-top: 40px;
+  }
+
+  .hero-item-subtitle {
+    font-size: 40px;
+  }
+}
