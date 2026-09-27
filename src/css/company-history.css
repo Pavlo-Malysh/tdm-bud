@@ -1,0 +1,117 @@
+.history-section {
+  background-color: var(--bg-light);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.history-section .container {
+  position: relative;
+}
+
+.history-section .container::before {
+  content: "";
+  left: 0;
+  top: -64px;
+  width: 100%;
+  border-top: 1px solid rgba(238, 220, 220, 0.59);
+
+  position: absolute;
+}
+
+.history-subtitle {
+  text-transform: uppercase;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-text-light);
+  margin-bottom: 8px;
+}
+
+.history-title {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-text);
+  margin-bottom: 48px;
+}
+
+.history-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding: 0 16px;
+  margin: 0 -16px;
+
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.history-list::-webkit-scrollbar {
+  display: none;
+  /* Chrome / Safari */
+}
+
+.history-item {
+  padding-top: 20px;
+  border-top: 2px solid var(--accent);
+
+  flex: 0 0 75%;
+  max-width: 158px;
+}
+
+.history-year {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--accent-text-light);
+  margin-bottom: 10px;
+}
+
+.history-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bg);
+  margin-bottom: 6px;
+}
+
+.history-item-text {
+  font-size: 14px;
+  color: var(--muted-light);
+  line-height: 1.5;
+}
+
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .history-title {
+    font-size: 36px;
+  }
+
+  .history-subtitle {
+    font-size: 14px;
+  }
+
+  .history-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px 0;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+  }
+
+  .history-item {
+    max-width: 190px;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .history-title {
+    font-size: 44px;
+  }
+}

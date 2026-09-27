@@ -13,15 +13,16 @@
       </ul>
       <button class="nav-cta">Отримати кошторис</button>
 
-      <button type="button" data-menu-open class="burger" id="burger" aria-label="Меню"><svg class="burger-icon"
-          width="24" height="24">
+      <button type="button" data-menu-open class="burger" id="burger" aria-label="Меню" aria-expanded="false"
+        aria-controls="mobileMenu"><svg class="burger-icon" width="24" height="24" aria-hidden="true">
           <use href="./sprite.svg#icon-burger"></use>
         </svg></button>
     </nav>
   </div>
-  <div class="mobile-menu" data-menu>
+  <div class="mobile-menu" id="mobileMenu" data-menu>
     <div class="container mobile-menu-container">
-      <button type="button" data-menu-close class="mobile-menu-btn-close"><svg class="btn-close" width="24" hight="24">
+      <button type="button" data-menu-close class="mobile-menu-btn-close" aria-label="Закрити меню"><svg
+          class="btn-close" width="24" height="24" aria-hidden="true">
           <use href="./sprite.svg#icon-close"></use>
         </svg></button>
       <nav class="mobile-nav">
@@ -36,15 +37,19 @@
       </nav>
 
       <address>
-        <a class="mobile-nav-tel" href="tel:+380506375032">+380 50 637 50 32</a>
+        <a class="mobile-nav-tel" href="tel:+380506375032"><svg class="mobile-tel-icon" width="15" height="20"
+            aria-hidden="true">
+            <use href="./sprite.svg#icon-phone"></use>
+          </svg>+380 50 637 50 32</a>
       </address>
       <ul class="mobile-menu-icon-list">
         <li class="menu-icon-item"><a href="https://www.instagram.com/tdm_bud_cv/" target="_blank"
-            rel="noopener noreferrer"><svg class="icon-link" width="20" hight="20">
+            rel="noopener noreferrer" aria-label="Instagram"><svg class="icon-link" width="20" height="20"
+              aria-hidden="true">
               <use href="./sprite.svg#icon-instagram"></use>
             </svg></a></li>
-        <li class="menu-icon-item"><a href="https://t.me/+380506375032" target="_blank" rel="noopener noreferrer"><svg
-              class="icon-link" width="20" hight="20">
+        <li class="menu-icon-item"><a href="https://t.me/+380506375032" target="_blank" rel="noopener noreferrer"
+            aria-label="Telegram"><svg class="icon-link" width="20" height="20" aria-hidden="true">
               <use href="./sprite.svg#icon-telegram"></use>
             </svg></a></li>
       </ul>
