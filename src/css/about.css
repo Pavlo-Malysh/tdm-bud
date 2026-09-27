@@ -90,6 +90,14 @@
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
+  .about-title {
+    font-size: 36px;
+  }
+
+  .about-subtitle {
+    font-size: 14px;
+  }
+
   .about-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -98,6 +106,10 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
+  .about-title {
+    font-size: 44px;
+  }
+
   .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
