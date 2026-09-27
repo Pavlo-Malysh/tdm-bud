@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
   <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
 
 
   <script type="module" crossorigin src="/tdm-bud/index.js"></script>
-  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-BRhRUJND.css">
+  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-DzI1AqH3.css">
 </head>
 
 <body>
@@ -31,15 +31,16 @@
       </ul>
       <button class="nav-cta">Отримати кошторис</button>
 
-      <button type="button" data-menu-open class="burger" id="burger" aria-label="Меню"><svg class="burger-icon"
-          width="24" height="24">
+      <button type="button" data-menu-open class="burger" id="burger" aria-label="Меню" aria-expanded="false"
+        aria-controls="mobileMenu"><svg class="burger-icon" width="24" height="24" aria-hidden="true">
           <use href="./sprite.svg#icon-burger"></use>
         </svg></button>
     </nav>
   </div>
-  <div class="mobile-menu" data-menu>
+  <div class="mobile-menu" id="mobileMenu" data-menu>
     <div class="container mobile-menu-container">
-      <button type="button" data-menu-close class="mobile-menu-btn-close"><svg class="btn-close" width="24" hight="24">
+      <button type="button" data-menu-close class="mobile-menu-btn-close" aria-label="Закрити меню"><svg
+          class="btn-close" width="24" height="24" aria-hidden="true">
           <use href="./sprite.svg#icon-close"></use>
         </svg></button>
       <nav class="mobile-nav">
@@ -54,15 +55,19 @@
       </nav>
 
       <address>
-        <a class="mobile-nav-tel" href="tel:+380506375032">+380 50 637 50 32</a>
+        <a class="mobile-nav-tel" href="tel:+380506375032"><svg class="mobile-tel-icon" width="15" height="20"
+            aria-hidden="true">
+            <use href="./sprite.svg#icon-phone"></use>
+          </svg>+380 50 637 50 32</a>
       </address>
       <ul class="mobile-menu-icon-list">
         <li class="menu-icon-item"><a href="https://www.instagram.com/tdm_bud_cv/" target="_blank"
-            rel="noopener noreferrer"><svg class="icon-link" width="20" hight="20">
+            rel="noopener noreferrer" aria-label="Instagram"><svg class="icon-link" width="20" height="20"
+              aria-hidden="true">
               <use href="./sprite.svg#icon-instagram"></use>
             </svg></a></li>
-        <li class="menu-icon-item"><a href="https://t.me/+380506375032" target="_blank" rel="noopener noreferrer"><svg
-              class="icon-link" width="20" hight="20">
+        <li class="menu-icon-item"><a href="https://t.me/+380506375032" target="_blank" rel="noopener noreferrer"
+            aria-label="Telegram"><svg class="icon-link" width="20" height="20" aria-hidden="true">
               <use href="./sprite.svg#icon-telegram"></use>
             </svg></a></li>
       </ul>
@@ -109,14 +114,14 @@
   </div>
 
 </section>
-    <section class="about-section">
+    <section class="about-section" id="#about">
   <div class="container">
     <div class="about-wrapper">
       <div class="about-content">
         <p class="about-subtitle">Про нас</p>
         <h2 class="about-title">Ми не просто будуємо. <br>
           Ми створюємо.</h2>
-        <p class="about-text">Ми — це команда професіоналів, яка спеціалізується на комплексному ремонті квартир,
+        <p class="about-text">Ми — команда професіоналів, яка спеціалізується на комплексному ремонті квартир,
           будинків та комерційних приміщень під ключ в м. Чернівці та області. Кожен проєкт — це можливість створити
           простір, в якому хочеться жити.</p>
         <p class="about-subtext">Ми працюємо з найкращими матеріалами, використовуємо перевірені технології та
@@ -164,7 +169,134 @@
     </div>
   </div>
 </section>
+    <section class="history-section" id="#history">
+  <div class="container">
+    <p class="history-subtitle">Історія</p>
+    <h2 class="history-title">Наш шлях</h2>
+    <ul class="history-list">
+      <li class="history-item">
+        <span class="history-year">2017</span>
+        <h3 class="history-item-title">Заснування TDM BUD</h3>
+        <p class="history-item-text">Перша власна бригада, перші обʼєкти у Чернівцях.</p>
+      </li>
+      <li class="history-item">
+        <span class="history-year">2019</span>
+        <h3 class="history-item-title">Запуск дизайн-відділу</h3>
+        <p class="history-item-text">Власні дизайнери: візуалізація та специфікації матеріалів.</p>
+      </li>
+      <li class="history-item">
+        <span class="history-year">2020</span>
+        <h3 class="history-item-title">50-й обʼєкт зданий</h3>
+        <p class="history-item-text">Виходимо на повний цикл — від демонтажу до меблювання.</p>
+      </li>
+      <li class="history-item">
+        <span class="history-year">2022</span>
+        <h3 class="history-item-title">Преміум-сегмент</h3>
+        <p class="history-item-text">Проєкти підвищеної складності площею 1000+м2</p>
+      </li>
+      <li class="history-item">
+        <span class="history-year">2024</span>
+        <h3 class="history-item-title">100+ проєктів</h3>
+        <p class="history-item-text">Квартири, будинки та комерційні приміщення</p>
+      </li>
+    </ul>
 
+  </div>
+</section>
+    <section class="steps-section" id="steps">
+  <div class="container">
+    <div class="text-wrap">
+      <div class="text-wrap-item">
+        <p class="steps-subtitle">Як ми працюємо</p>
+        <h2 class="steps-title">6 кроків до вашого
+          нового дому</h2>
+      </div>
+      <div class="text-wrap-item">
+        <p class="text-wrap-article">Чіткий план фіксований бюджет, жодних сюрпризів. Ви завжди знаєте, на якому етапі
+          проєкт. Ми ведемо від першого дзвінка до новосілля.</p>
+      </div>
+    </div>
+    <ul class="steps-list">
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-call"></use>
+          </svg>
+          <span>01</span>
+        </div>
+
+        <h3 class="steps-list-title">Перший дзвінок</h3>
+        <p class="steps-list-text">Обговорюємо задачу, площу та побажання. Домовляємось про безкоштовний виїзд на замір.
+        </p>
+        <span class="steps-info">Безкоштовно</span>
+      </li>
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-cube"></use>
+          </svg>
+          <span>02</span>
+        </div>
+
+        <h3 class="steps-list-title">Дизайн і візуалізація</h3>
+        <p class="steps-list-text">Готуємо планування, 3D-візуалізацію та специфікацію матеріалів. Ви бачите результат
+          до старту робіт.</p>
+        <span class="steps-info">7-14 днів</span>
+      </li>
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-contract"></use>
+          </svg>
+          <span>03</span>
+        </div>
+
+        <h3 class="steps-list-title">Кошторис і договір</h3>
+        <p class="steps-list-text">Складаємо детальний кошторис. Ціна і терміни фіксуються до початку робіт. Додаткові
+          роботи обговорюються окремо, а не з'являються "сюрпризом" в кінцевому кошторисі</p>
+        <span class="steps-info">Фіксована ціна</span>
+      </li>
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-cart"></use>
+          </svg>
+          <span>04</span>
+        </div>
+
+        <h3 class="steps-list-title">Купівля матеріалів</h3>
+        <p class="steps-list-text">Закуповуємо та доставляємо матеріали за специфікацією. Всі чеки та звіти — у вас на
+          руках.</p>
+        <span class="steps-info">Прозоро</span>
+      </li>
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-roller"></use>
+          </svg>
+          <span>05</span>
+        </div>
+
+        <h3 class="steps-list-title">Виконання робіт</h3>
+        <p class="steps-list-text">Працює власна бригада за графіком. Щотижня надсилаємо фото/відео звіт.</p>
+        <span class="steps-info">Фото-звіт щотижня</span>
+      </li>
+      <li class="steps-list-item">
+        <div class="steps-card-wrap"><svg class="steps-icon" width="38" height="38" aria-hidden="true">
+            <use href="./sprite.svg#icon-key"></use>
+          </svg>
+          <span>06</span>
+        </div>
+
+        <h3 class="steps-list-title">Здача та гарантія</h3>
+        <p class="steps-list-text">Прибирання, перевірка всіх систем, підписання акту. Консультація з приводу
+          експлуатації приміщення.</p>
+        <span class="steps-info">Гарантія 10 років</span>
+      </li>
+    </ul>
+
+  </div>
+</section>
+    
+    
+    
+    
+    
 
 
   </main>
