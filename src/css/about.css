@@ -25,11 +25,14 @@
   margin-bottom: 20px;
 }
 
-.about-text {
+.about-text,
+.about-text-one {
+  text-indent: 18px;
   margin-bottom: 10px;
 }
 
 .about-subtext {
+  text-indent: 18px;
   margin-bottom: 25px;
 }
 
