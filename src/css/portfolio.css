@@ -1,0 +1,180 @@
+.portfolio-section {
+  background-color: var(--bg-light);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.portfolio-subtitle {
+  text-transform: uppercase;
+  font-family: "Manrope";
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent-text-light);
+  margin-bottom: 8px;
+}
+
+.portfolio-title {
+  font-family: "Manrope";
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: var(--color-text);
+
+}
+
+.portfolio-accent-btn {
+  background-color: transparent;
+  border: none;
+  color: var(--accent-text-light);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  padding: 16px 16px 16px 0;
+  cursor: pointer;
+}
+
+.portfolio-accent-btn:focus-visible {
+  color: var(--accent-text-dark);
+}
+
+@media (hover: hover) {
+  .portfolio-accent-btn:hover {
+    color: var(--accent-text-dark);
+  }
+}
+
+.portfolio-text-wrap {
+  margin-bottom: 18px;
+}
+
+
+
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio-list-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+
+  max-height: 230px;
+}
+
+.portfolio-list-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background-image: linear-gradient(to top,
+      rgba(14, 11, 9, .85) 0%,
+      rgba(14, 11, 9, 0) 55%);
+  background-color: transparent;
+
+  pointer-events: none;
+  transition: background-color .3s ease;
+}
+
+@media (hover: hover) {
+  .portfolio-list-item:hover::before {
+    background-color: rgba(14, 11, 9, .45);
+  }
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.5s;
+}
+
+@media (hover: hover) {
+  .portfolio-list-item:hover .portfolio-img {
+    transform: scale(1.06);
+  }
+}
+
+.portfolio-list-text {
+  position: absolute;
+  z-index: 2;
+  left: 16px;
+  bottom: 14px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+}
+
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .portfolio-section {
+    padding-top: 100px;
+  }
+
+  .portfolio-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .portfolio-title {
+    font-size: 36px;
+  }
+
+  .portfolio-subtitle {
+    font-size: 14px;
+  }
+
+  .portfolio-list-item {
+    max-height: 300px;
+  }
+}
+
+
+/* TABLET — розкриття картки по кліку */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-list-item {
+    cursor: pointer;
+    transition: max-height .4s ease;
+  }
+
+  .portfolio-list-item.open {
+    max-height: 560px;
+  }
+}
+
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-bottom: 100px;
+  }
+
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 230px;
+    gap: 20px;
+  }
+
+  .portfolio-list-item {
+    max-height: none;
+  }
+
+
+  .portfolio-list-item:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .portfolio-list-item:first-child .portfolio-list-text {
+    font-size: 20px;
+  }
+}
