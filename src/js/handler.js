@@ -5,7 +5,7 @@ refs.menuClose.addEventListener("click", closeMenu);
 refs.mobileMenu.addEventListener("click", closeOnBackdrop);
 refs.mobileNavLinks.addEventListener("click", closeOnNavLink);
 document.addEventListener("keydown", closeOnEscape);
-
+refs.portfolioList.addEventListener("click", openPortfolioCard);
 
 function openMenu() {
   refs.mobileMenu.classList.add("is-open");
@@ -34,5 +34,23 @@ function closeOnNavLink(e) {
 function closeOnEscape(e) {
   if (e.key === "Escape") {
     closeMenu();
+  }
+}
+
+function openPortfolioCard(e) {
+  const card = e.target.closest("li")
+  const list = e.currentTarget
+  const prevCard = list.querySelector(".open")
+
+  if (!card) return;
+  if (prevCard) {
+    prevCard.classList.remove("open")
+  }
+
+
+  card.classList.add("open");
+
+  if (prevCard === card) {
+    prevCard.classList.remove("open");
   }
 }

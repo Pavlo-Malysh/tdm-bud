@@ -27,12 +27,10 @@
 
 .about-text,
 .about-text-one {
-  text-indent: 18px;
   margin-bottom: 10px;
 }
 
 .about-subtext {
-  text-indent: 18px;
   margin-bottom: 25px;
 }
 
@@ -53,10 +51,12 @@
   transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
 }
 
-.about-item:hover {
-  border-color: rgba(164, 77, 32, .35);
-  box-shadow: 0 6px 20px -8px rgba(23, 19, 15, .18);
-  transform: translateY(-2px);
+@media (hover: hover) {
+  .about-item:hover {
+    border-color: rgba(164, 77, 32, .35);
+    box-shadow: 0 6px 20px -8px rgba(23, 19, 15, .18);
+    transform: translateY(-2px);
+  }
 }
 
 .about-icon-box {

@@ -164,7 +164,9 @@
     padding: 40px 30px 44px;
     transition: transform .2s ease, box-shadow .2s ease;
   }
+}
 
+@media only screen and (min-width: 1200px) and (hover: hover) {
   .steps-list-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 28px -10px rgba(0, 0, 0, .45);

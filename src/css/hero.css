@@ -67,13 +67,22 @@
   transition: box-shadow .2s ease, transform .2s ease, background-color .2s ease;
 }
 
-.hero-btn:hover,
 .hero-btn:focus-visible {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow:
     0 2px 4px rgba(23, 19, 15, .3),
     0 12px 28px -6px rgba(217, 122, 68, .55);
+}
+
+@media (hover: hover) {
+  .hero-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow:
+      0 2px 4px rgba(23, 19, 15, .3),
+      0 12px 28px -6px rgba(217, 122, 68, .55);
+  }
 }
 
 .hero-btn:active {
@@ -103,13 +112,22 @@
   transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
-.hero-link:hover,
 .hero-link:focus-visible {
   background-color: rgba(255, 255, 255, .10);
   border-color: rgba(255, 255, 255, .30);
   box-shadow:
     0 2px 6px rgba(14, 11, 9, .35),
     inset 0 1px 0 rgba(255, 255, 255, .16);
+}
+
+@media (hover: hover) {
+  .hero-link:hover {
+    background-color: rgba(255, 255, 255, .10);
+    border-color: rgba(255, 255, 255, .30);
+    box-shadow:
+      0 2px 6px rgba(14, 11, 9, .35),
+      inset 0 1px 0 rgba(255, 255, 255, .16);
+  }
 }
 
 .hero-link:active {
