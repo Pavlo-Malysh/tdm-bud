@@ -1,3 +1,3 @@
 
 import "./js/handler.js";
-import "./js/gallery.js";
+import "./js/swiper-portfolio.js";
