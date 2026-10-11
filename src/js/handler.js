@@ -6,6 +6,7 @@ refs.mobileMenu.addEventListener("click", closeOnBackdrop);
 refs.mobileNavLinks.addEventListener("click", closeOnNavLink);
 document.addEventListener("keydown", closeOnEscape);
 refs.portfolioList.addEventListener("click", openPortfolioCard);
+refs.faqListBtn.addEventListener("click", toggleFAQcard);
 
 function openMenu() {
   refs.mobileMenu.classList.add("is-open");
@@ -52,5 +53,23 @@ function openPortfolioCard(e) {
 
   if (prevCard === card) {
     prevCard.classList.remove("open");
+  }
+}
+
+function toggleFAQcard(e) {
+  const item = e.target.closest("li");
+  const list = e.currentTarget;
+  const prevItem = list.querySelector(".is-open")
+
+
+  if (!item) return;
+  if (prevItem) {
+    prevItem.classList.remove("is-open");
+  }
+
+  item.classList.add("is-open");
+
+  if (prevItem === item) {
+    prevItem.classList.remove("is-open");
   }
 }
