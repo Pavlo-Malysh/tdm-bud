@@ -35,6 +35,9 @@
   --color-text: #201e1d;
   --accent-text-dark: #E08A57;
   --accent-text-light: #A44D20;
+  --c-border: rgba(239, 232, 220, 0.10);
+  --c-border-hover: rgba(193, 98, 46, 0.45);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1)
 }
 
 body {
