@@ -46,8 +46,9 @@
   }
 }
 
-.portfolio-swiper {
-  width: 100%;
+.portfolio-section .portfolio-swiper {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
 }
 
 .portfolio-list-item {
@@ -164,8 +165,10 @@
 
 /* Close Swiper  */
 @media only screen and (min-width: 768px) {
-  .portfolio-swiper {
+  .portfolio-section .portfolio-swiper {
     overflow: visible;
+    width: auto;
+    margin-inline: 0;
   }
 
   .portfolio-section .portfolio-list {
