@@ -93,6 +93,7 @@
   font-weight: 600;
   line-height: 1.4;
   text-align: left;
+  color: var(--color-text);
   flex: 1;
 }
 
@@ -148,7 +149,7 @@
 .faq-item-panel {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows .4s var(--ease);
+  transition: grid-template-rows 0.4s var(--ease);
 
 
 }

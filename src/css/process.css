@@ -68,6 +68,20 @@
   margin-bottom: 6px;
 }
 
+.process-item-text-icon {
+  fill: var(--accent);
+}
+
+
+
+.process-item-text {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
 .process-list-text {
   font-size: 14px;
   color: var(--muted);

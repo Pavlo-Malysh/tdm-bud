@@ -38,7 +38,10 @@
   --c-border: rgba(239, 232, 220, 0.10);
   --c-border-hover: rgba(193, 98, 46, 0.45);
   --color-gradient: #211B16;
-  --ease: cubic-bezier(0.22, 0.61, 0.36, 1)
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --c-field: rgba(255, 255, 255, 0.04);
+  --c-field-border: rgba(255, 255, 255, 0.12);
+  --c-error: #e8735a;
 }
 
 body {
