@@ -118,11 +118,6 @@
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
-  .process-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
   .process-title {
     font-size: 36px;
     margin-bottom: 32px;
@@ -154,13 +149,10 @@
 
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
-  /* .process-section .container {
-    padding: 0 50px;
-  } */
 
   .process-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .process-title {

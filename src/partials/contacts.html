@@ -1,4 +1,4 @@
-<section class="contacts-section">
+<section class="contacts-section" id="contacts">
   <div class="container">
     <div class="contacts-wrap">
       <div class="contacts-content">
@@ -57,52 +57,8 @@
 
       </div>
       <div class="contacts-modal lead-card">
-        <form action="" class="lead-form">
-          <p class="label-form-subtitle">Безкоштовно</p>
-          <h3 class="form-title">Отримати кошторис на ваш ремонт</h3>
-          <p class="form-text">Залиште ім'я і телефон — зв'яжемось протягом години в робочий час і обговоримо проєкт.
-          </p>
-          <ul class="lead-form-list">
-            <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
-                <use href="/sprite.svg#icon-check"></use>
-              </svg>
-              <p class="form-list-text">Безкоштовний виїзд на замір</p>
-            </li>
-            <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
-                <use href="/sprite.svg#icon-check"></use>
-              </svg>
-              <p class="form-list-text">Без зобов'язань</p>
-            </li>
-          </ul>
-          <div class="lead-fields">
-            <div class="form-field">
-              <label class="form-field-label" for="lead-name">Ваше ім'я</label>
-              <input class="form-field-input" id="lead-name" type="text" name="username" placeholder="Наприклад, Олена"
-                autocomplete="given-name" required>
-              <p class="field-error" id="lead-name-error" aria-describedby="lead-name-error" aria-live="polite">Вкажіть,
-                як до вас звертатися</p>
-            </div>
-            <div class="form-field">
-              <label class="form-field-label" for="lead-phone">Телефон</label>
-              <input class="form-field-input" id="lead-phone" type="text" name="username"
-                placeholder="+380 XX XXX XX XX" autocomplete="tel" required>
-              <p class="field-error" id="lead-phone-error" aria-describedby="lead-name-error" aria-live="polite">
-                Перевірте
-                номер: потрібно 9 цифр після +380</p>
-            </div>
+        <load src="/partials/form.html" />
 
-          </div>
-
-
-          <button class="form-btn" type="submit">
-            <p>Отримати кошторис</p>
-            <svg class="form-icon-arrow" width="20" height="20" aria-hidden="true">
-              <use href="/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
-          <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на <a href="#" target="_blank"
-              rel="noopener noreferrer">обробку персональних даних</a></p>
-        </form>
       </div>
       <div class="contacts-map"></div>
     </div>

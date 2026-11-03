@@ -87,10 +87,6 @@
 
 /* TABLET */
 @media only screen and (min-width: 768px) {
-  .history-section {
-    padding-bottom: 100px;
-  }
-
   .history-title {
     font-size: 36px;
   }
@@ -116,7 +112,12 @@
 /* DESKTOP */
 @media only screen and (min-width: 1200px) {
   .history-section {
-    padding-bottom: 120px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .history-section .container::before {
+    top: -100px;
   }
 
   .history-title {
