@@ -14,7 +14,7 @@
   <script type="module" crossorigin src="/tdm-bud/index.js"></script>
   <link rel="modulepreload" crossorigin href="/tdm-bud/assets/vendor-CjgKWNgD.js">
   <link rel="stylesheet" crossorigin href="/tdm-bud/assets/vendor-XYtvLfmp.css">
-  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-CR5jnYGu.css">
+  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-BhIoyefK.css">
 </head>
 
 <body>
@@ -88,7 +88,7 @@
 
   <main>
     <!-- Loads the specified .html file -->
-    <section class="hero">
+    <section class="hero" id="hero">
   <div class="container">
     <p class="hero-subtitle">Чернівці та область</p>
     <h1 class="hero-title">Комплексний ремонт квартир та будинків під ключ</h1>
@@ -96,7 +96,7 @@
       підрядник, один кошторис, фіксовані терміни в договорі.</p>
 
     <div class="hero-actions">
-      <button type="button" class="hero-btn">Безкоштовний прорахунок</button>
+      <button type="button" data-modal-open class="hero-btn">Безкоштовний прорахунок</button>
       <a class="hero-link" href="#works">Дивитись роботи</a>
     </div>
 
@@ -830,7 +830,7 @@
     </div>
   </div>
 </section>
-    <section class="contacts-section">
+    <section class="contacts-section" id="contacts">
   <div class="container">
     <div class="contacts-wrap">
       <div class="contacts-content">
@@ -890,51 +890,52 @@
       </div>
       <div class="contacts-modal lead-card">
         <form action="" class="lead-form">
-          <p class="label-form-subtitle">Безкоштовно</p>
-          <h3 class="form-title">Отримати кошторис на ваш ремонт</h3>
-          <p class="form-text">Залиште ім'я і телефон — зв'яжемось протягом години в робочий час і обговоримо проєкт.
-          </p>
-          <ul class="lead-form-list">
-            <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
-                <use href="/tdm-bud/sprite.svg#icon-check"></use>
-              </svg>
-              <p class="form-list-text">Безкоштовний виїзд на замір</p>
-            </li>
-            <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
-                <use href="/tdm-bud/sprite.svg#icon-check"></use>
-              </svg>
-              <p class="form-list-text">Без зобов'язань</p>
-            </li>
-          </ul>
-          <div class="lead-fields">
-            <div class="form-field">
-              <label class="form-field-label" for="lead-name">Ваше ім'я</label>
-              <input class="form-field-input" id="lead-name" type="text" name="username" placeholder="Наприклад, Олена"
-                autocomplete="given-name" required>
-              <p class="field-error" id="lead-name-error" aria-describedby="lead-name-error" aria-live="polite">Вкажіть,
-                як до вас звертатися</p>
-            </div>
-            <div class="form-field">
-              <label class="form-field-label" for="lead-phone">Телефон</label>
-              <input class="form-field-input" id="lead-phone" type="text" name="username"
-                placeholder="+380 XX XXX XX XX" autocomplete="tel" required>
-              <p class="field-error" id="lead-phone-error" aria-describedby="lead-name-error" aria-live="polite">
-                Перевірте
-                номер: потрібно 9 цифр після +380</p>
-            </div>
+  <p class="label-form-subtitle">Безкоштовно</p>
+  <h3 class="form-title">Отримати кошторис на ваш ремонт</h3>
+  <p class="form-text">Залиште ім'я і телефон — зв'яжемось протягом години в робочий час і обговоримо проєкт.
+  </p>
+  <ul class="lead-form-list">
+    <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
+        <use href="/tdm-bud/sprite.svg#icon-check"></use>
+      </svg>
+      <p class="form-list-text">Безкоштовний виїзд на замір</p>
+    </li>
+    <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
+        <use href="/tdm-bud/sprite.svg#icon-check"></use>
+      </svg>
+      <p class="form-list-text">Без зобов'язань</p>
+    </li>
+  </ul>
+  <div class="lead-fields">
+    <div class="form-field">
+      <label class="form-field-label" for="lead-name">Ваше ім'я</label>
+      <input class="form-field-input" id="lead-name" type="text" name="username" placeholder="Наприклад, Олена"
+        autocomplete="given-name" required>
+      <p class="field-error" id="lead-name-error" aria-describedby="lead-name-error" aria-live="polite">Вкажіть,
+        як до вас звертатися</p>
+    </div>
+    <div class="form-field">
+      <label class="form-field-label" for="lead-phone">Телефон</label>
+      <input class="form-field-input" id="lead-phone" type="text" name="username" placeholder="+380 XX XXX XX XX"
+        autocomplete="tel" required>
+      <p class="field-error" id="lead-phone-error" aria-describedby="lead-name-error" aria-live="polite">
+        Перевірте
+        номер: потрібно 9 цифр після +380</p>
+    </div>
 
-          </div>
+  </div>
 
 
-          <button class="form-btn" type="submit">
-            <p>Отримати кошторис</p>
-            <svg class="form-icon-arrow" width="20" height="20" aria-hidden="true">
-              <use href="/tdm-bud/sprite.svg#icon-arrow"></use>
-            </svg>
-          </button>
-          <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на <a href="#" target="_blank"
-              rel="noopener noreferrer">обробку персональних даних</a></p>
-        </form>
+  <button class="form-btn" type="submit">
+    <p>Отримати кошторис</p>
+    <svg class="form-icon-arrow" width="20" height="20" aria-hidden="true">
+      <use href="/tdm-bud/sprite.svg#icon-arrow"></use>
+    </svg>
+  </button>
+  <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на <a href="#" target="_blank"
+      rel="noopener noreferrer">обробку персональних даних</a></p>
+</form>
+
       </div>
       <div class="contacts-map"></div>
     </div>
@@ -945,8 +946,117 @@
   </main>
 
   <footer class="footer">
-  Footer
+  <div class="container">
+
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#hero">
+          <img src="/tdm-bud/assets/logo-CMcZKFcl.png" alt="logo TDM BUD" width="30" height="30">
+          <span>TDM BUD</span>
+        </a>
+        <p class="footer-desc">Комплексний ремонт квартир та будинків під ключ у Чернівцях і області.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Навігація у футері">
+        <ul class="footer-nav-list">
+          <li><a class="footer-link" href="#about">Про нас</a></li>
+          <li><a class="footer-link" href="#steps">Як ми працюємо</a></li>
+          <li><a class="footer-link" href="#process">Процес</a></li>
+          <li><a class="footer-link" href="#works">Роботи</a></li>
+          <li><a class="footer-link" href="#reviews">Відгуки</a></li>
+          <li><a class="footer-link" href="#faq">Питання</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <ul class="footer-social">
+        <li class="footer-social-item">
+          <a href="https://www.instagram.com/tdm_bud_cv/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram">
+            <svg class="footer-social-icon" width="18" height="18" aria-hidden="true">
+              <use href="./sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="https://www.tiktok.com/@tdm_bud_cv" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg class="footer-social-icon" width="18" height="18" aria-hidden="true">
+              <use href="./sprite.svg#icon-tiktok"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer-social-item">
+          <a href="https://t.me/+380506375032" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <svg class="footer-social-icon" width="18" height="18" aria-hidden="true">
+              <use href="./sprite.svg#icon-telegram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer-copy">&copy; 2026 TDM BUD</p>
+    </div>
+
+  </div>
 </footer>
+
+  <div class="backdrop" data-modal>
+  <div class="modal" role="dialog" aria-modal="true" aria-label="Отримати кошторис на ваш ремонт">
+    <button type="button" data-modal-close class="modal-btn-close" aria-label="Закрити модальне вікно"><svg
+        class="btn-close" width="12" height="12" aria-hidden="true">
+        <use href="./sprite.svg#icon-close"></use>
+      </svg></button>
+
+    <form action="" class="lead-form">
+  <p class="label-form-subtitle">Безкоштовно</p>
+  <h3 class="form-title">Отримати кошторис на ваш ремонт</h3>
+  <p class="form-text">Залиште ім'я і телефон — зв'яжемось протягом години в робочий час і обговоримо проєкт.
+  </p>
+  <ul class="lead-form-list">
+    <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
+        <use href="/tdm-bud/sprite.svg#icon-check"></use>
+      </svg>
+      <p class="form-list-text">Безкоштовний виїзд на замір</p>
+    </li>
+    <li class="lead-form-item"><svg class="lead-form-list-icon" width="20" height="20">
+        <use href="/tdm-bud/sprite.svg#icon-check"></use>
+      </svg>
+      <p class="form-list-text">Без зобов'язань</p>
+    </li>
+  </ul>
+  <div class="lead-fields">
+    <div class="form-field">
+      <label class="form-field-label" for="lead-name">Ваше ім'я</label>
+      <input class="form-field-input" id="lead-name" type="text" name="username" placeholder="Наприклад, Олена"
+        autocomplete="given-name" required>
+      <p class="field-error" id="lead-name-error" aria-describedby="lead-name-error" aria-live="polite">Вкажіть,
+        як до вас звертатися</p>
+    </div>
+    <div class="form-field">
+      <label class="form-field-label" for="lead-phone">Телефон</label>
+      <input class="form-field-input" id="lead-phone" type="text" name="username" placeholder="+380 XX XXX XX XX"
+        autocomplete="tel" required>
+      <p class="field-error" id="lead-phone-error" aria-describedby="lead-name-error" aria-live="polite">
+        Перевірте
+        номер: потрібно 9 цифр після +380</p>
+    </div>
+
+  </div>
+
+
+  <button class="form-btn" type="submit">
+    <p>Отримати кошторис</p>
+    <svg class="form-icon-arrow" width="20" height="20" aria-hidden="true">
+      <use href="/tdm-bud/sprite.svg#icon-arrow"></use>
+    </svg>
+  </button>
+  <p class="form-note">Натискаючи кнопку, ви погоджуєтесь на <a href="#" target="_blank"
+      rel="noopener noreferrer">обробку персональних даних</a></p>
+</form>
+
+  </div>
+</div>
 
 </body>
 
