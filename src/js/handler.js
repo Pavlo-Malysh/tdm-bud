@@ -7,6 +7,28 @@ refs.mobileNavLinks.addEventListener("click", closeOnNavLink);
 document.addEventListener("keydown", closeOnEscape);
 refs.portfolioList.addEventListener("click", openPortfolioCard);
 refs.faqListBtn.addEventListener("click", toggleFAQcard);
+refs.openModalBtn.addEventListener("click", toggleModal);
+refs.closeModalBtn.addEventListener("click", toggleModal);
+refs.modal.addEventListener("click", closeModalOnBackdrop);
+
+function toggleModal() {
+  const isOpen = refs.modal.classList.toggle("is-open");
+  document.body.classList.toggle("is-modal-open", isOpen);
+};
+
+function closeModal() {
+  refs.modal.classList.remove("is-open");
+  document.body.classList.remove("is-modal-open");
+};
+
+
+function closeModalOnBackdrop(e) {
+  if (e.target === refs.modal) {
+    closeModal();
+  }
+};
+
+
 
 function openMenu() {
   refs.mobileMenu.classList.add("is-open");
@@ -35,6 +57,7 @@ function closeOnNavLink(e) {
 function closeOnEscape(e) {
   if (e.key === "Escape") {
     closeMenu();
+    closeModal();
   }
 }
 

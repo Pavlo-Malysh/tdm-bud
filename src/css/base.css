@@ -38,6 +38,7 @@
   --c-border: rgba(239, 232, 220, 0.10);
   --c-border-hover: rgba(193, 98, 46, 0.45);
   --color-gradient: #211B16;
+  --card-surface: radial-gradient(120% 140% at 100% 0%, rgba(193, 98, 46, 0.22) 0%, transparent 60%), var(--color-gradient);
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --c-field: rgba(255, 255, 255, 0.04);
   --c-field-border: rgba(255, 255, 255, 0.12);

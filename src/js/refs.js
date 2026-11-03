@@ -4,5 +4,9 @@ export const refs = {
   menuClose: document.querySelector("[data-menu-close]"),
   mobileNavLinks: document.querySelector(".mobile-nav-links"),
   portfolioList: document.querySelector(".portfolio-list"),
-  faqListBtn: document.querySelector(".faq-list")
+  faqListBtn: document.querySelector(".faq-list"),
+
+  openModalBtn: document.querySelector("[data-modal-open]"),
+  closeModalBtn: document.querySelector("[data-modal-close]"),
+  modal: document.querySelector("[data-modal]"),
 }
