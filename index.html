@@ -14,7 +14,7 @@
   <script type="module" crossorigin src="/tdm-bud/index.js"></script>
   <link rel="modulepreload" crossorigin href="/tdm-bud/assets/vendor-CjgKWNgD.js">
   <link rel="stylesheet" crossorigin href="/tdm-bud/assets/vendor-XYtvLfmp.css">
-  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-BhIoyefK.css">
+  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-B0tFvNv4.css">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
         <li><a href="#works">Роботи</a></li>
         <li><a href="#contacts">Контакти</a></li>
       </ul>
-      <button class="nav-cta">Отримати кошторис</button>
+      <button type="button" data-modal-open class="nav-cta">Отримати кошторис</button>
 
       <button type="button" data-menu-open class="burger" id="burger" aria-label="Меню" aria-expanded="false"
         aria-controls="mobileMenu"><svg class="burger-icon" width="24" height="24" aria-hidden="true">
@@ -53,7 +53,7 @@
           <li><a href="#works">Роботи</a></li>
           <li><a href="#contacts">Контакти</a></li>
         </ul>
-        <button class="nav-cta">Отримати кошторис</button>
+        <button type="button" data-modal-open class="nav-cta">Отримати кошторис</button>
       </nav>
 
       <address>
@@ -348,7 +348,7 @@
               </li>
             </ul>
 
-            <button type="button" class="process-btn">Безкоштовно</button>
+            <button type="button" class="process-btn" data-modal-open>Безкоштовно</button>
           </div>
           <div class="process-list-wrap-item proc-item"><img src="/tdm-bud/assets/step1-remontnye-rabotykh-5nckwuxX.jpg"
               alt="Замір та дизайн-проєкт" width="343" height="226" class="process-list-img"></div>
@@ -607,7 +607,12 @@
 
     <div class="portfolio-pagination"></div>
 
-    <button class="portfolio-accent-btn" type="button">Хочу так само →</button>
+    <button class="portfolio-accent-btn" type="button" data-modal-open>
+      Хочу так само
+      <svg class="portfolio-btn-arrow" width="18" height="18" aria-hidden="true">
+        <use href="/tdm-bud/sprite.svg#icon-arrow"></use>
+      </svg>
+    </button>
   </div>
 </section>
     <section class="reviews-section" id="reviews">
@@ -671,7 +676,7 @@
         <h3 class="faq-cta-title">Не знайшли відповідь?</h3>
         <p class="faq-cta-text">Поставте питання прорабу — відповімо протягом 15 хвилин у робочий час.</p>
         <div class="faq-cta-action">
-          <button type="button" class="faq-btn faq-btn-primary" data-cta="faq-ask">
+          <button type="button" data-modal-open class="faq-btn faq-btn-primary" data-cta="faq-ask">
             <p>Поставити питання</p>
             <svg class="faq-cta-icon" width="24" heigth="24" aria-hidden="true">
               <use href="/tdm-bud/sprite.svg#icon-arrow-thin-right"></use>
