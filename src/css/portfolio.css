@@ -26,23 +26,53 @@
 }
 
 .portfolio-accent-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 36px auto 0;
+  padding: 14px 28px;
+
+  font-family: "Manrope";
   font-size: 16px;
-  background-color: transparent;
-  border: none;
+  font-weight: 600;
   color: var(--accent-text-light);
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  padding: 16px 16px 16px 0;
+  background-color: transparent;
+  border: 1px solid rgba(164, 77, 32, .35);
+  border-radius: 4px;
   cursor: pointer;
+
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.portfolio-btn-arrow {
+  flex-shrink: 0;
+  fill: currentColor;
+  transition: transform .2s ease;
 }
 
 .portfolio-accent-btn:focus-visible {
-  color: var(--accent-text-dark);
+  border-color: var(--accent);
+  background-color: rgba(164, 77, 32, .08);
+}
+
+.portfolio-accent-btn:focus-visible .portfolio-btn-arrow {
+  transform: translateX(4px);
 }
 
 @media (hover: hover) {
   .portfolio-accent-btn:hover {
-    color: var(--accent-text-dark);
+    border-color: var(--accent);
+    background-color: rgba(164, 77, 32, .08);
+  }
+
+  .portfolio-accent-btn:hover .portfolio-btn-arrow {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-btn-arrow {
+    transition: none;
   }
 }
 

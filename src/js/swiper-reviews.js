@@ -11,6 +11,7 @@ const swiperReviews = new Swiper(".reviews-swiper", {
   centeredSlides: true,
   spaceBetween: 12,
   initialSlide: 1,
+  watchSlidesProgress: true,
 
   pagination: {
     el: ".reviews-pagination",

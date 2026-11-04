@@ -30,8 +30,28 @@
 .reviews-item {
   height: auto;
   background-color: var(--white);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
+
+  opacity: .45;
+  box-shadow: 0 12px 28px -12px rgba(0, 0, 0, .6);
+
+  transition: opacity .35s var(--ease), transform .35s var(--ease), box-shadow .35s var(--ease);
+}
+
+.reviews-item.swiper-slide-active {
+  opacity: 1;
+  box-shadow: 0 22px 48px -16px rgba(0, 0, 0, .75);
+}
+
+/* три класи в селекторі — щоб перебити .swiper-backface-hidden .swiper-slide
+   зі swiper.css, яке задає transform: translateZ(0) */
+.reviews-swiper .reviews-item.swiper-slide {
+  transform: translateZ(0) scale(.94);
+}
+
+.reviews-swiper .reviews-item.swiper-slide-active {
+  transform: translateZ(0) scale(1);
 }
 
 .reviews-shot {
@@ -175,5 +195,31 @@
 
   .reviews-controls {
     margin-top: 28px;
+  }
+
+  /* три рівноцінні картки — активного слайда візуально немає */
+  .reviews-item,
+  .reviews-item.swiper-slide-active {
+    opacity: 1;
+    box-shadow: 0 18px 40px -14px rgba(0, 0, 0, .7);
+  }
+
+  .reviews-swiper .reviews-item.swiper-slide,
+  .reviews-swiper .reviews-item.swiper-slide-active {
+    transform: translateZ(0);
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reviews-swiper .reviews-item.swiper-slide,
+  .reviews-swiper .reviews-item.swiper-slide-active {
+    transform: translateZ(0);
+  }
+
+  .reviews-item,
+  .reviews-item.swiper-slide-active {
+    transition: opacity .35s ease;
   }
 }
