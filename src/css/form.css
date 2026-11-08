@@ -7,8 +7,9 @@
 .form-field {}
 
 .form-field-label {
-  display: block;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   font-size: 12px;
   font-weight: 700;
@@ -56,8 +57,12 @@
   color: var(--c-error);
 }
 
-.field-error {
-  display: none;
+.is-invalid {
+  border-color: var(--c-error);
+
+  &:focus {
+    border-color: var(--c-error);
+  }
 }
 
 .form-btn {

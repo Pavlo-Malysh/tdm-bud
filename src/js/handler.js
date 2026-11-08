@@ -11,30 +11,6 @@ document.addEventListener("click", openModalOnTrigger);
 refs.closeModalBtn.addEventListener("click", closeModal);
 refs.modal.addEventListener("click", closeModalOnBackdrop);
 
-function openModal() {
-  refs.modal.classList.add("is-open");
-  document.body.classList.add("is-modal-open");
-};
-
-function openModalOnTrigger(e) {
-  if (e.target.closest("[data-modal-open]")) {
-    closeMenu();
-    openModal();
-  }
-};
-
-function closeModal() {
-  refs.modal.classList.remove("is-open");
-  document.body.classList.remove("is-modal-open");
-};
-
-
-function closeModalOnBackdrop(e) {
-  if (e.target === refs.modal) {
-    closeModal();
-  }
-};
-
 
 
 function openMenu() {
@@ -103,3 +79,30 @@ function toggleFAQcard(e) {
     prevItem.classList.remove("is-open");
   }
 }
+
+
+function openModal() {
+  refs.modal.classList.add("is-open");
+  document.body.classList.add("is-modal-open");
+};
+
+function openModalOnTrigger(e) {
+  if (e.target.closest("[data-modal-open]")) {
+    closeMenu();
+    openModal();
+  }
+};
+
+export function closeModal() {
+  refs.modal.classList.remove("is-open");
+  document.body.classList.remove("is-modal-open");
+};
+
+
+function closeModalOnBackdrop(e) {
+  if (e.target === refs.modal) {
+    closeModal();
+  }
+};
+
+
