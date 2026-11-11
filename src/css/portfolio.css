@@ -120,12 +120,45 @@
   align-items: center;
   gap: 6px;
 
+  margin: 0;
   padding: 4px 8px;
+  border: none;
   border-radius: 15px;
   background-color: rgba(51, 51, 51, 0.2);
+  appearance: none;
 
+  font: inherit;
+  line-height: 1;
   color: #fff;
   cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  transition:
+    background-color .3s var(--ease),
+    transform .3s var(--ease),
+    box-shadow .3s var(--ease);
+}
+
+@media (hover: hover) {
+  .portfolio-icon-card-wrap:hover {
+    background-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(193, 98, 46, 0.4);
+  }
+
+  .portfolio-icon-card-wrap:hover .portfolio-icon {
+    transform: scale(1.12);
+  }
+}
+
+.portfolio-icon-card-wrap:focus-visible {
+  background-color: var(--accent);
+  outline: 2px solid var(--accent-hover);
+  outline-offset: 2px;
+}
+
+.portfolio-icon-card-wrap:active {
+  transform: scale(.96);
 }
 
 .portfolio-icon {
@@ -133,6 +166,7 @@
   height: 16px;
   flex-shrink: 0;
   fill: currentColor;
+  transition: transform .3s var(--ease);
 }
 
 .portfolio-icon-text {

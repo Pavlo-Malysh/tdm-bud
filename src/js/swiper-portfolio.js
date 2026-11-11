@@ -30,7 +30,8 @@ function togglePortfolioSwiper() {
   }
 }
 
-togglePortfolioSwiper();
-
-mq.addEventListener("change", togglePortfolioSwiper);
+export function initPortfolioSwiper() {
+  togglePortfolioSwiper();
+  mq.addEventListener("change", togglePortfolioSwiper);
+}
 
