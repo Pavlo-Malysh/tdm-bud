@@ -6,7 +6,7 @@
 
 .faq-subtitle {
   text-transform: uppercase;
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -15,7 +15,7 @@
 }
 
 .faq-title {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-weight: 800;
   font-size: 28px;
   line-height: 1.11;
@@ -88,7 +88,7 @@
 }
 
 .faq-item-question {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
@@ -166,7 +166,7 @@
 .faq-item-answer p {
 
   padding: 0 26px 26px 26px;
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-text);
@@ -222,7 +222,7 @@
 }
 
 .faq-btn p {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 14px;
   font-weight: 600;
   letter-spacing: .02em;

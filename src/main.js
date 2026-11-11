@@ -1,4 +1,6 @@
 
+import '@fontsource-variable/manrope';
+
 import "./js/handler.js";
 import "./js/swiper-reviews.js";
 import "./js/form.js";

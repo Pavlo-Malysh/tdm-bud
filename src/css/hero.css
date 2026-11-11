@@ -19,7 +19,7 @@
 }
 
 .hero-title {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-weight: 800;
   font-size: 36px;
   line-height: 1.11;
@@ -51,7 +51,7 @@
   display: block;
   width: 100%;
   color: var(--white);
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -93,7 +93,7 @@
 .hero-link {
   display: block;
   width: 100%;
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   color: var(--white);
   font-size: 14px;
   font-weight: 600;
