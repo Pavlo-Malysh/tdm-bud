@@ -8,5 +8,7 @@ export const refs = {
 
   closeModalBtn: document.querySelector("[data-modal-close]"),
   modal: document.querySelector("[data-modal]"),
-  forms: document.querySelectorAll(".js-form")
+  forms: document.querySelectorAll(".js-form"),
+  projectList: document.querySelector("#portfolio-list"),
+
 }

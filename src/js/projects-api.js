@@ -5,12 +5,30 @@ const API_URL = import.meta.env.VITE_API_URL;
 axios.defaults.baseURL = API_URL
 
 export async function getProjects() {
-  const response = await axios.get(
-    "/projects"
-  );
 
-  console.log(response.data.data);
+  try {
+    const projects = await axios.get(
+      "/projects"
+    );
+    return projects.data.data;
+
+  } catch (error) {
+    console.error("Помилка при завантаженні проектів:", error.message)
+  }
+
 }
 
+export async function getProjectById(projectId) {
 
-getProjects()
+  try {
+    const project = await axios.get(
+      `/projects/${projectId}`
+    );
+    return project.data.data.photos;
+
+  } catch (error) {
+    console.error("Помилка при завантаженні проекта:", error.message)
+  }
+
+}
+

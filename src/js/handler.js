@@ -1,3 +1,6 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+import { getProjectById } from "./projects-api.js";
 import { refs } from "./refs.js";
 
 refs.menuOpen.addEventListener("click", openMenu);
@@ -10,8 +13,9 @@ refs.faqListBtn.addEventListener("click", toggleFAQcard);
 document.addEventListener("click", openModalOnTrigger);
 refs.closeModalBtn.addEventListener("click", closeModal);
 refs.modal.addEventListener("click", closeModalOnBackdrop);
+refs.projectList.addEventListener("click", openProjectPhotos);
 
-
+const lightboxes = {};
 
 function openMenu() {
   refs.mobileMenu.classList.add("is-open");
@@ -105,4 +109,36 @@ function closeModalOnBackdrop(e) {
   }
 };
 
+
+
+async function openProjectPhotos(e) {
+  const btn = e.target.closest(".js-photos-btn")
+  if (!btn) return;
+
+  const card = e.target.closest("li");
+  const id = card.id;
+
+  if (lightboxes[id]) {
+    lightboxes[id].open();
+    return;
+  }
+
+  try {
+    const photos = await getProjectById(id);
+    console.log(photos);
+
+    const box = card.querySelector(".photos-box");
+    box.innerHTML = photos.map((photo) => `<a href="${photo.url}"></a>`).join("");
+
+    lightboxes[id] = new SimpleLightbox(`[id="${id}"] .photos-box a`);
+    lightboxes[id].open();
+
+  } catch (error) {
+    console.log(error.message);
+
+  }
+
+
+
+}
 
