@@ -274,7 +274,7 @@ body.is-menu-open {
   border: 1px solid var(--border-dark);
   color: var(--white);
   padding: 12px 24px;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Manrope Variable', sans-serif;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;

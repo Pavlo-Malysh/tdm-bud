@@ -6,7 +6,7 @@
 
 .portfolio-subtitle {
   text-transform: uppercase;
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -15,7 +15,7 @@
 }
 
 .portfolio-title {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-weight: 800;
   font-size: 28px;
   line-height: 1.11;
@@ -32,7 +32,7 @@
   margin: 36px auto 0;
   padding: 14px 28px;
 
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 16px;
   font-weight: 600;
   color: var(--accent-text-light);

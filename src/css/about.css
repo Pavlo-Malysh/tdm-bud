@@ -6,7 +6,7 @@
 
 .about-subtitle {
   text-transform: uppercase;
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -15,7 +15,7 @@
 }
 
 .about-title {
-  font-family: "Manrope";
+  font-family: "Manrope Variable";
   font-weight: 800;
   font-size: 28px;
   line-height: 1.11;
