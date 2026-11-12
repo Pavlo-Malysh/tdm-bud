@@ -30,7 +30,7 @@ function renderProjectCard(obj) {
             <svg class="portfolio-icon" width="16" height="16" aria-hidden="true">
               <use href="./sprite.svg#icon-photo-card"></use>
             </svg>
-            <span class="portfolio-icon-text">1 / ${photos.length}</span>
+            <span class="portfolio-icon-text"> Більше фото...</span>
           </button>
           <picture>
             <source media="(min-width:768px)" srcset="${cover.desktop}">
