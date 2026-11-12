@@ -32,3 +32,14 @@ export async function getProjectById(projectId) {
 
 }
 
+export async function getReviews() {
+  try {
+    const projects = await axios.get(
+      "/reviews"
+    );
+    return projects.data.data;
+
+  } catch (error) {
+    console.error("Помилка при завантаженні відгуків:", error.message)
+  }
+}

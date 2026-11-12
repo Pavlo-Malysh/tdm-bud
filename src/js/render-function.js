@@ -1,4 +1,4 @@
-import { getProjects } from "./projects-api.js";
+import { getProjects, getReviews } from "./projects-api.js";
 import { refs } from "./refs.js";
 import { initPortfolioSwiper } from "./swiper-portfolio.js";
 
@@ -45,3 +45,33 @@ function renderProjectsCards(array) {
   return array.map(renderProjectCard).join("\n")
 };
 
+function renderReviewsCard(obj) {
+  const { _id, title, description, cover } = obj
+
+  return `<li class="reviews-item swiper-slide" id="${_id}">
+        <div class="reviews-shot">
+          <img class="reviews-img" src="${cover}"
+            alt="Відгук клієнта про ремонт ${description}" width="576" height="478" loading="lazy">
+        </div>
+        <p class="reviews-author">${title}<span class="reviews-object">${description}</span></p>
+      </li>
+`
+}
+
+function renderReviewsCards(array) {
+  return array.map(renderReviewsCard).join("\n")
+};
+
+
+async function createReviewsList() {
+  const reviews = await getReviews();
+
+  if (!reviews || reviews.length === 0) return;
+
+  const markup = renderReviewsCards(reviews);
+
+  refs.reviewsList.insertAdjacentHTML("afterbegin", markup);
+
+};
+
+createReviewsList();
