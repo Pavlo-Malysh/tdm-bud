@@ -4,6 +4,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 import { refs } from "./refs.js";
 import { closeModal } from "./handler.js";
+import { postLead } from "./projects-api.js";
 
 const Schema = Yup.object().shape({
   username: Yup.string().min(3, "Ім'я має містити щонайменше 3 символи")
@@ -61,11 +62,15 @@ refs.forms.forEach((form) => {
 
 
     const data = Object.fromEntries(new FormData(form));
+    const submitBtn = form.querySelector('[type="submit"]');
+    const btnLabel = submitBtn.querySelector("p");
+    const btnText = btnLabel.textContent;
 
+    submitBtn.disabled = true;
+    btnLabel.textContent = "Надсилаємо…";
 
     try {
-
-      console.log(data);
+      await postLead(data);
 
       form.reset()
       closeModal()
@@ -85,13 +90,9 @@ refs.forms.forEach((form) => {
         message: "Не вдалося надіслати заявку. Спробуйте пізніше.",
         position: "topRight",
       });
-
-
+    } finally {
+      submitBtn.disabled = false;
+      btnLabel.textContent = btnText;
     }
-
-
-
-
-
   })
 })

@@ -125,7 +125,6 @@ async function openProjectPhotos(e) {
 
   try {
     const photos = await getProjectById(id);
-    console.log(photos);
 
     const box = card.querySelector(".photos-box");
     box.innerHTML = photos.map((photo) => `<a href="${photo.url}"></a>`).join("");
