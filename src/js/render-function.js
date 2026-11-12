@@ -5,15 +5,19 @@ import { initPortfolioSwiper } from "./swiper-portfolio.js";
 
 
 async function createProjectList() {
-  const projects = await getProjects();
+  try {
+    const projects = await getProjects();
+    if (!projects?.length) return;
 
-  if (!projects || projects.length === 0) return;
+    const markup = renderProjectsCards(projects);
 
-  const markup = renderProjectsCards(projects);
+    refs.projectList.insertAdjacentHTML("afterbegin", markup);
+    initPortfolioSwiper();
 
-  refs.projectList.insertAdjacentHTML("afterbegin", markup);
+  } catch (error) {
+    console.error("Помилка при завантаженні проєктів:", error.message);
+  }
 
-  initPortfolioSwiper();
 };
 
 createProjectList();
@@ -64,13 +68,18 @@ function renderReviewsCards(array) {
 
 
 async function createReviewsList() {
-  const reviews = await getReviews();
+  try {
+    const reviews = await getReviews();
+    if (!reviews?.length) return;
 
-  if (!reviews || reviews.length === 0) return;
+    const markup = renderReviewsCards(reviews);
 
-  const markup = renderReviewsCards(reviews);
+    refs.reviewsList.insertAdjacentHTML("afterbegin", markup);
 
-  refs.reviewsList.insertAdjacentHTML("afterbegin", markup);
+  } catch (error) {
+    console.error("Помилка при завантаженні відгуків:", error.message);
+  }
+
 
 };
 
