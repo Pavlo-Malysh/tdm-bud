@@ -10,5 +10,5 @@ export const refs = {
   modal: document.querySelector("[data-modal]"),
   forms: document.querySelectorAll(".js-form"),
   projectList: document.querySelector("#portfolio-list"),
-
+  reviewsList: document.querySelector("#reviews-list")
 }
