@@ -11,7 +11,7 @@
   <script type="module" crossorigin src="/tdm-bud/index.js"></script>
   <link rel="modulepreload" crossorigin href="/tdm-bud/assets/vendor-DDKOMOAt.js">
   <link rel="stylesheet" crossorigin href="/tdm-bud/assets/vendor-68uN5Tyv.css">
-  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-BozkP0VI.css">
+  <link rel="stylesheet" crossorigin href="/tdm-bud/assets/index-DgmU2PEH.css">
 </head>
 
 <body>
@@ -509,7 +509,17 @@
 
     </div>
     <div class="portfolio-swiper swiper">
-      <ul class="portfolio-list swiper-wrapper" id="portfolio-list"></ul>
+      <ul class="portfolio-list swiper-wrapper" id="portfolio-list" aria-busy="true">
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+        <li class="portfolio-list-item swiper-slide portfolio-skeleton" aria-hidden="true"></li>
+      </ul>
     </div>
 
     <div class="portfolio-pagination"></div>
@@ -529,7 +539,28 @@
   </div>
 
   <div class="reviews-swiper swiper">
-    <ul class="reviews-list swiper-wrapper" id="reviews-list">
+    <ul class="reviews-list swiper-wrapper" id="reviews-list" aria-busy="true">
+      <li class="reviews-item swiper-slide reviews-skeleton" aria-hidden="true">
+        <div class="reviews-shot"></div>
+        <p class="reviews-author">
+          <span class="reviews-skeleton-line"></span>
+          <span class="reviews-skeleton-line reviews-object"></span>
+        </p>
+      </li>
+      <li class="reviews-item swiper-slide reviews-skeleton" aria-hidden="true">
+        <div class="reviews-shot"></div>
+        <p class="reviews-author">
+          <span class="reviews-skeleton-line"></span>
+          <span class="reviews-skeleton-line reviews-object"></span>
+        </p>
+      </li>
+      <li class="reviews-item swiper-slide reviews-skeleton" aria-hidden="true">
+        <div class="reviews-shot"></div>
+        <p class="reviews-author">
+          <span class="reviews-skeleton-line"></span>
+          <span class="reviews-skeleton-line reviews-object"></span>
+        </p>
+      </li>
     </ul>
   </div>
 
@@ -540,7 +571,11 @@
       </svg>
     </button>
 
-    <div class="reviews-pagination"></div>
+    <div class="reviews-pagination">
+      <span class="reviews-dot" aria-hidden="true"></span>
+      <span class="reviews-dot reviews-dot-active" aria-hidden="true"></span>
+      <span class="reviews-dot" aria-hidden="true"></span>
+    </div>
 
     <button class="reviews-btn reviews-next" type="button" aria-label="Наступний відгук">
       <svg class="reviews-btn-icon" width="18" height="18" aria-hidden="true">
