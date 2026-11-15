@@ -203,6 +203,54 @@
   color: var(--white);
 }
 
+/* SKELETON */
+.portfolio-skeleton {
+  background: linear-gradient(90deg, #e6e3df 25%, #efedea 50%, #e6e3df 75%);
+  background-size: 200% 100%;
+  animation: portfolio-shimmer 1.4s linear infinite;
+  pointer-events: none;
+}
+
+.portfolio-skeleton::before {
+  content: none;
+}
+
+@keyframes portfolio-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-skeleton {
+    animation: none;
+  }
+}
+
+/* BEFORE SWIPER INIT */
+@media only screen and (max-width: 767.98px) {
+  .portfolio-swiper:not(.swiper-initialized) {
+    overflow: hidden;
+  }
+
+  .portfolio-swiper:not(.swiper-initialized) .portfolio-list {
+    --slide-w: calc((100% - 1.8px) / 1.15);
+
+    display: flex;
+    gap: 12px;
+    transform: translateX(calc((100% - var(--slide-w)) / 2 - var(--slide-w) - 12px));
+  }
+
+  .portfolio-swiper:not(.swiper-initialized) .portfolio-list-item {
+    flex: 0 0 var(--slide-w);
+    width: var(--slide-w);
+  }
+
+  .portfolio-pagination {
+    min-height: var(--swiper-pagination-bullet-size);
+  }
+}
+
 
 /* PAGINATION */
 .portfolio-pagination {
@@ -278,6 +326,10 @@
 
   .portfolio-section .portfolio-list-item.open {
     max-height: 580px;
+  }
+
+  .portfolio-section .portfolio-skeleton {
+    height: 300px;
   }
 }
 

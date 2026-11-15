@@ -1,23 +1,31 @@
 import { getProjects, getReviews } from "./projects-api.js";
 import { refs } from "./refs.js";
 import { initPortfolioSwiper } from "./swiper-portfolio.js";
+import { setReviewsSlides } from "./swiper-reviews.js";
 
 
+
+function hideProjectsSection() {
+  refs.projectList.closest(".portfolio-section").hidden = true;
+}
 
 async function createProjectList() {
   try {
     const projects = await getProjects();
-    if (!projects?.length) return;
+    if (!projects?.length) {
+      hideProjectsSection();
+      return;
+    }
 
-    const markup = renderProjectsCards(projects);
-
-    refs.projectList.insertAdjacentHTML("afterbegin", markup);
+    refs.projectList.innerHTML = renderProjectsCards(projects);
     initPortfolioSwiper();
 
   } catch (error) {
     console.error("Помилка при завантаженні проєктів:", error.message);
+    hideProjectsSection();
+  } finally {
+    refs.projectList.removeAttribute("aria-busy");
   }
-
 };
 
 createProjectList();
@@ -67,20 +75,26 @@ function renderReviewsCards(array) {
 };
 
 
+function hideReviewsSection() {
+  refs.reviewsList.closest(".reviews-section").hidden = true;
+}
+
 async function createReviewsList() {
   try {
     const reviews = await getReviews();
-    if (!reviews?.length) return;
+    if (!reviews?.length) {
+      hideReviewsSection();
+      return;
+    }
 
-    const markup = renderReviewsCards(reviews);
-
-    refs.reviewsList.insertAdjacentHTML("afterbegin", markup);
+    setReviewsSlides(renderReviewsCards(reviews));
 
   } catch (error) {
     console.error("Помилка при завантаженні відгуків:", error.message);
+    hideReviewsSection();
+  } finally {
+    refs.reviewsList.removeAttribute("aria-busy");
   }
-
-
 };
 
 createReviewsList();

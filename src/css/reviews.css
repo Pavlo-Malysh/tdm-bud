@@ -81,6 +81,78 @@
   color: var(--muted-light);
 }
 
+/* SKELETON */
+.reviews-skeleton .reviews-shot,
+.reviews-skeleton-line {
+  background: linear-gradient(90deg, #ebe8e3 25%, #f5f3ef 50%, #ebe8e3 75%);
+  background-size: 200% 100%;
+  animation: reviews-shimmer 1.4s linear infinite;
+}
+
+.reviews-skeleton-line {
+  display: block;
+  width: 70%;
+  height: 1lh;
+  border-radius: 4px;
+}
+
+.reviews-skeleton-line.reviews-object {
+  width: 45%;
+}
+
+@keyframes reviews-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* BEFORE SWIPER INIT */
+.reviews-swiper:not(.swiper-initialized) {
+  overflow: hidden;
+}
+
+.reviews-swiper:not(.swiper-initialized) .reviews-list {
+  --slide-w: calc((100% - 1.8px) / 1.15);
+
+  display: flex;
+  gap: 12px;
+  transform: translateX(calc((100% - var(--slide-w)) / 2 - var(--slide-w) - 12px));
+}
+
+.reviews-swiper:not(.swiper-initialized) .reviews-item {
+  flex: 0 0 var(--slide-w);
+  width: var(--slide-w);
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .reviews-swiper:not(.swiper-initialized) .reviews-item:nth-child(2) {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+
+  .reviews-pagination {
+    min-height: var(--swiper-pagination-bullet-size);
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .reviews-swiper:not(.swiper-initialized) .reviews-list {
+    --slide-w: calc((100% - 12.8px) / 1.8);
+
+    gap: 16px;
+    transform: translateX(calc((100% - var(--slide-w)) / 2 - var(--slide-w) - 16px));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .reviews-swiper:not(.swiper-initialized) .reviews-list {
+    --slide-w: calc((100% - 48px) / 3);
+
+    gap: 24px;
+    transform: none;
+  }
+}
+
 
 /* CONTROLS */
 .reviews-controls {
@@ -101,7 +173,23 @@
   display: flex;
   justify-content: center;
   gap: 8px;
-  width: auto;
+  width: 100%;
+}
+
+.reviews-dot {
+  display: inline-block;
+  width: var(--swiper-pagination-bullet-size);
+  height: var(--swiper-pagination-bullet-size);
+  border-radius: 50%;
+  background-color: var(--swiper-pagination-bullet-inactive-color);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity);
+}
+
+.reviews-dot-active {
+  width: 20px;
+  border-radius: 4px;
+  background-color: var(--swiper-pagination-color);
+  opacity: 1;
 }
 
 .reviews-pagination .swiper-pagination-bullet {
@@ -197,6 +285,10 @@
     margin-top: 28px;
   }
 
+  .reviews-dot {
+    display: none;
+  }
+
   /* три рівноцінні картки — активного слайда візуально немає */
   .reviews-item,
   .reviews-item.swiper-slide-active {
@@ -221,5 +313,10 @@
   .reviews-item,
   .reviews-item.swiper-slide-active {
     transition: opacity .35s ease;
+  }
+
+  .reviews-skeleton .reviews-shot,
+  .reviews-skeleton-line {
+    animation: none;
   }
 }
