@@ -1,113 +1,125 @@
-# Vanilla App Template
+# TDM BUD — Turnkey Apartment & House Renovation in Chernivtsi
 
-Цей проект було створено за допомогою Vite. Для знайомства та налаштування
-додаткових можливостей [звернись до документації](https://vitejs.dev/).
+A single-page website for **TDM BUD**, a local company in Chernivtsi that
+provides turnkey renovation of apartments and houses in the city and the
+surrounding region.
 
-## Створення репозиторію за шаблоном
+The site introduces the company, explains how it works, showcases completed
+projects and client reviews, and collects requests for a free cost estimate.
 
-Використовуй цей репозиторій організації GoIT як шаблон для створення
-репозиторію свого проекту. Для цього натисни на кнопку `«Use this template»` і
-обери опцію `«Create a new repository»`, як показано на зображенні.
+🔗 **Live site:** [tdm-bud.vercel.app](https://tdm-bud.vercel.app/)
 
-![Creating repo from a template step 1](./assets/template-step-1.png)
+## Features
 
-На наступному етапі відкриється сторінка створення нового репозиторію. Заповни
-поле його імені, переконайся, що репозиторій публічний, після чого натисни
-кнопку `«Create repository from template»`.
+- **Responsive, mobile-first layout** with a burger menu on mobile.
+- **Portfolio from the API** — project cards are loaded from the backend; the
+  "More photos" button fetches a project's photos on demand and opens them in a
+  lightbox (SimpleLightbox). On mobile the portfolio turns into a slider.
+- **Reviews from the API** — a Swiper slider with navigation and pagination.
+- Loaders are shown while data is loading. If the API is unavailable or returns
+  an empty list, the portfolio and reviews sections are hidden so the page never
+  shows empty blocks.
+- **Request form** (in a page section and in a modal) validated with Yup:
+  name — 3–30 characters, phone — Ukrainian format (`380XXXXXXXXX` or
+  `0XXXXXXXXX`). Errors appear next to the field as the user types. The request
+  is sent to `POST /leads`, and the result is shown with an iziToast
+  notification.
+- **FAQ accordion**, modal window, closing the menu/modal with `Esc` or a click
+  on the backdrop.
 
-![Creating repo from a template step 2](./assets/template-step-2.png)
+## Page Sections
 
-Після того, як репозиторій буде створено, необхідно перейти в налаштування
-створеного репозиторію на вкладку `Settings` > `Actions` > `General` як показано
-на зображенні.
+| Section              | File                                   |
+| -------------------- | -------------------------------------- |
+| Header & navigation  | `src/partials/header.html`             |
+| Hero                 | `src/partials/hero.html`               |
+| About us             | `src/partials/about.html`              |
+| Company history      | `src/partials/company-history.html`    |
+| 6 steps of work      | `src/partials/steps.html`              |
+| On-site process      | `src/partials/process.html`            |
+| Portfolio            | `src/partials/portfolio.html`          |
+| Reviews              | `src/partials/reviews.html`            |
+| FAQ                  | `src/partials/faq.html`                |
+| Contacts             | `src/partials/contacts.html`           |
+| Footer               | `src/partials/footer.html`             |
+| Modal with form      | `src/partials/modal.html`, `form.html` |
 
-![Settings GitHub Actions permissions step 1](./assets/gh-actions-perm-1.png)
+## Tech Stack
 
-Проскроливши сторінку до самого кінця, в секції `«Workflow permissions»` обери
-опцію `«Read and write permissions»` і постав галочку в чекбоксі. Це необхідно
-для автоматизації процесу деплою проекту.
+- [Vite](https://vitejs.dev/) + `vite-plugin-html-inject` (assembles the page
+  from HTML partials via `<load src="..."/>`) and `vite-plugin-full-reload`
+- Vanilla JavaScript (ES modules), plain CSS, `postcss-sort-media-queries`
+- [Axios](https://axios-http.com/) — API requests
+- [Swiper](https://swiperjs.com/) — sliders
+- [SimpleLightbox](https://simplelightbox.com/) — project photo gallery
+- [Yup](https://github.com/jquense/yup) — form validation
+- [iziToast](https://izitoast.marcelodolza.com/) — notifications
+- Manrope font (`@fontsource-variable/manrope`)
 
-![Settings GitHub Actions permissions step 2](./assets/gh-actions-perm-2.png)
+## Project Structure
 
-Тепер у тебе є особистий репозиторій проекту, зі структурою файлів та папок
-репозиторію-шаблону. Далі працюй з ним, як з будь-яким іншим особистим
-репозиторієм, клонуй його собі на комп'ютер, пиши код, роби коміти та відправляй
-їх на GitHub.
-
-## Підготовка до роботи
-
-1. Переконайся, що на комп'ютері встановлено LTS-версію Node.js.
-   [Скачай та встанови](https://nodejs.org/en/) її якщо необхідно.
-2. Встанови базові залежності проекту в терміналі командою `npm install`.
-3. Запусти режим розробки, виконавши в терміналі команду `npm run dev`.
-4. Перейдіть у браузері за адресою
-   [http://localhost:5173](http://localhost:5173). Ця сторінка буде автоматично
-   перезавантажуватись після збереження змін у файли проекту.
-
-## Файли і папки
-
-- Файли розмітки компонентів сторінки повинні лежати в папці `src/partials` та
-  імпортуватись до файлу `index.html`. Наприклад, файл з розміткою хедера
-  `header.html` створюємо у папці `partials` та імпортуємо в `index.html`.
-- Файли стилів повинні лежати в папці `src/css` та імпортуватись до HTML-файлів
-  сторінок. Наприклад, для `index.html` файл стилів називається `index.css`.
-- Зображення додавай до папки `src/img`. Збирач оптимізує їх, але тільки при
-  деплої продакшн версії проекту. Все це відбувається у хмарі, щоб не
-  навантажувати твій комп'ютер, тому що на слабких компʼютерах це може зайняти
-  багато часу.
-
-## Деплой
-
-Продакшн версія проекту буде автоматично збиратися та деплоїтись на GitHub
-Pages, у гілку `gh-pages`, щоразу, коли оновлюється гілка `main`. Наприклад,
-після прямого пуша або прийнятого пул-реквесту. Для цього необхідно у файлі
-`package.json` змінити значення прапора `--base=/<REPO>/`, для команди `build`,
-замінивши `<REPO>` на назву свого репозиторію, та відправити зміни на GitHub.
-
-```json
-"build": "vite build --base=/<REPO>/",
+```
+src/
+├── index.html          # entry point, includes the partials
+├── main.js             # imports the font and JS modules
+├── partials/           # HTML page sections
+├── css/                # styles, one file per section + styles.css
+├── js/
+│   ├── projects-api.js     # API requests (projects, photos, reviews, leads)
+│   ├── render-function.js  # renders portfolio and review cards
+│   ├── handler.js          # menu, modal, FAQ, lightbox
+│   ├── form.js             # form validation and submission
+│   ├── swiper-portfolio.js # portfolio slider (mobile only)
+│   ├── swiper-reviews.js   # reviews slider
+│   └── refs.js             # DOM element references
+├── img/                # images
+└── public/             # favicon, SVG sprite
 ```
 
-Далі необхідно зайти в налаштування GitHub-репозиторію (`Settings` > `Pages`) та
-виставити роздачу продакшн версії файлів з папки `/root` гілки `gh-pages`, якщо
-це не було зроблено автоматично.
+## API
 
-![GitHub Pages settings](./assets/repo-settings.png)
+The base URL is set with the `VITE_API_URL` environment variable. Endpoints used:
 
-### Статус деплою
+| Method | Path            | Purpose                                  |
+| ------ | --------------- | ---------------------------------------- |
+| `GET`  | `/projects`     | list of projects for the portfolio       |
+| `GET`  | `/projects/:id` | photos of a specific project             |
+| `GET`  | `/reviews`      | list of reviews                          |
+| `POST` | `/leads`        | form request (`username`, `phone`)       |
 
-Статус деплою крайнього коміту відображається іконкою біля його ідентифікатора.
+## Running Locally
 
-- **Жовтий колір** - виконується збірка та деплой проекту.
-- **Зелений колір** - деплой завершився успішно.
-- **Червоний колір** - під час лінтингу, збірки чи деплою сталася помилка.
+Requires the LTS version of [Node.js](https://nodejs.org/).
 
-Більш детальну інформацію про статус можна переглянути натиснувши на іконку, і в
-вікні, що випадає, перейти за посиланням `Details`.
+```bash
+npm install
+```
 
-![Deployment status](./assets/deploy-status.png)
+Create a `src/.env` file based on `.env.example` (the Vite root is the `src`
+folder, so `.env` is read from there):
 
-### Жива сторінка
+```env
+VITE_API_URL=https://your-backend.example.com
+```
 
-Через якийсь час, зазвичай кілька хвилин, живу сторінку можна буде подивитися за
-адресою, вказаною на вкладці `Settings` > `Pages` в налаштуваннях репозиторію.
-Наприклад, ось посилання на живу версію для цього репозиторію
+Then:
 
-[https://goitacademy.github.io/vanilla-app-template/](https://goitacademy.github.io/vanilla-app-template/).
+```bash
+npm run dev      # dev server at http://localhost:5173
+npm run build    # production build into dist/
+npm run preview  # preview the production build
+```
 
-Якщо відкриється порожня сторінка, переконайся, що у вкладці `Console` немає
-помилок пов'язаних з неправильними шляхами до CSS та JS файлів проекту
-(**404**). Швидше за все у тебе неправильне значення прапора `--base` для
-команди `build` у файлі `package.json`.
+## Deployment
 
-## Як це працює
+The frontend is deployed on [Vercel](https://vercel.com/):
+[tdm-bud.vercel.app](https://tdm-bud.vercel.app/). Set `VITE_API_URL` in the
+Vercel project's environment variables so the build can reach the backend.
 
-![How it works](./assets/how-it-works.png)
+The repository also contains a GitHub Actions workflow
+(`.github/workflows/deploy.yml`) that builds the project with `--base=/tdm-bud/`
+and publishes `dist` to the `gh-pages` branch on every push to `main`.
 
-1. Після кожного пуша у гілку `main` GitHub-репозиторію, запускається
-   спеціальний скрипт (GitHub Action) із файлу `.github/workflows/deploy.yml`.
-2. Усі файли репозиторію копіюються на сервер, де проект ініціалізується та
-   проходить лінтинг та збірку перед деплоєм.
-3. Якщо всі кроки пройшли успішно, зібрана продакшн версія файлів проекту
-   відправляється у гілку `gh-pages`. В іншому випадку, у лозі виконання скрипта
-   буде вказано в чому проблема.
+## Author
+
+Pavlo Malysh — [GitHub](https://github.com/Pavlo-Malysh)
