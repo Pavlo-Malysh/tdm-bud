@@ -7,7 +7,7 @@ surrounding region.
 The site introduces the company, explains how it works, showcases completed
 projects and client reviews, and collects requests for a free cost estimate.
 
-🔗 **Live site:** [tdm-bud.vercel.app](https://tdm-bud.vercel.app/)
+🔗 **Live site:** [www.tdm-bud.com](https://www.tdm-bud.com/)
 
 ## Features
 
