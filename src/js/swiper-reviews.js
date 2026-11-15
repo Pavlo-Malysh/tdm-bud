@@ -37,3 +37,9 @@ const swiperReviews = new Swiper(".reviews-swiper", {
     },
   },
 });
+
+export function setReviewsSlides(markup) {
+  swiperReviews.wrapperEl.innerHTML = markup;
+  swiperReviews.update();
+  swiperReviews.slideTo(Math.min(1, swiperReviews.slides.length - 1), 0);
+}
